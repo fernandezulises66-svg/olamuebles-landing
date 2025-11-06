@@ -596,3 +596,12 @@ img.loaded {
 .catalogo h2, .catalogo p, .catalogo h3, .contacto h2, .contacto p, .contacto h3, .info-contacto p, form label, input, textarea {
     color: #5D4E37; /* Marrón bien oscuro */
 }
+/* Iframe de Vimeo como fondo */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
