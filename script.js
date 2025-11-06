@@ -95,3 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+// Detectar móvil y quitar autoplay
+document.addEventListener('DOMContentLoaded', () => {
+    const videoIframe = document.getElementById('hero-video');
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Ya no hay autoplay en móviles
+        videoIframe.src = 'https://player.vimeo.com/video/1134395753?muted=1&loop=1&background=1';
+    }
+});
