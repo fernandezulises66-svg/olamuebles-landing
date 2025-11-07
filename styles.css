@@ -614,3 +614,12 @@ img.loaded {
         height: 100vh; /* Ajustar la sección hero también */
     }
 }
+/* Video ocupe todo el hero en móviles */
+@media (max-width: 768px) {
+    .hero-video {
+        height: 100%; /* Ocupa toda la altura del hero */
+    }
+    .hero {
+        height: 80vh; /* Mantener altura del hero en móviles */
+    }
+}
