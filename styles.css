@@ -605,3 +605,12 @@ img.loaded {
     height: 100%;
     z-index: 1;
 }
+/* Agrandar video en móviles */
+@media (max-width: 768px) {
+    .hero-video {
+        height: 100vh; /* Altura completa de la pantalla */
+    }
+    .hero {
+        height: 100vh; /* Ajustar la sección hero también */
+    }
+}
