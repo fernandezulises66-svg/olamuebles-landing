@@ -626,7 +626,7 @@ img.loaded {
 /* Ajustar altura del video en móviles */
 @media (max-width: 768px) {
     .hero-video {
-        height: 160vh; /* Cambia este valor según quieras (ej: 60vh, 80vh) */
+        height: 40vh; /* Cambia este valor según quieras (ej: 60vh, 80vh) */
     }
     .hero {
         height: 80vh; /* Ajustar la sección hero también */
