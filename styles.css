@@ -617,7 +617,7 @@ img.loaded {
 /* Video ocupe todo el hero en móviles */
 @media (max-width: 768px) {
     .hero-video {
-        height: 100%; /* Ocupa toda la altura del hero */
+        height: 180%; /* Ocupa toda la altura del hero */
     }
     .hero {
         height: 80vh; /* Mantener altura del hero en móviles */
@@ -626,7 +626,7 @@ img.loaded {
 /* Ajustar altura del video en móviles */
 @media (max-width: 768px) {
     .hero-video {
-        height: 40vh; /* Cambia este valor según quieras (ej: 60vh, 80vh) */
+        height: 80vh; /* Cambia este valor según quieras (ej: 60vh, 80vh) */
     }
     .hero {
         height: 80vh; /* Ajustar la sección hero también */
