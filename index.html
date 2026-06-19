@@ -155,29 +155,25 @@ nav.scrolled .nav-links a { color: white; }
   /* NOSOTROS */
   #nosotros {
     background: var(--bg);
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 96px; align-items: center; padding: 128px 56px;
+    display: grid; grid-template-columns: minmax(300px, 540px) minmax(200px, 420px);
+    gap: 140px; align-items: center; justify-content: center; padding: 128px 56px;
   }
-  .about-heading {
-    font-weight: 200; font-size: clamp(36px, 4.5vw, 60px);
-    line-height: 1.1; letter-spacing: -.025em; margin-bottom: 40px;
+  .about-title-row {
+    display: flex; align-items: baseline; gap: 20px;
+    margin-bottom: 36px;
   }
-  .about-heading em { font-style: italic; color: var(--accent); }
-  .about-body { font-size: 14px; font-weight: 300; line-height: 1.9; color: var(--ink-mid); max-width: 460px; }
+  .about-title-main {
+    font-weight: 200; font-size: clamp(26px, 4.5vw, 50px);
+    line-height: 1.1; letter-spacing: -.025em; color:var(--accent); opacity:(0.5);
+  }
+  .about-title-sub {
+    font-weight: 450; font-size: clamp(12px, 1.4vw, 18px); font-style: italic
+    ; letter-spacing: .10em; color: var(--ink-mid);
+  }
+  .about-body { font-size: 14px; font-weight: 300; line-height: 1.9; color: black; max-width: 460px; text-align: justify; }
   .about-body p+p { margin-top: 16px; }
-  .about-right { position: relative; }
-  .about-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; filter: contrast(1.03) saturate(.9); }
-  .about-accent-block {
-    position: absolute; bottom: -20px; left: -20px;
-    width: 130px; height: 130px;
-    background: var(--accent-lt); border: 1px solid var(--accent-md); z-index: -1;
-  }
-  .about-stats {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 28px; margin-top: 52px; padding-top: 44px; border-top: 1px solid var(--border);
-  }
-  .stat-num { font-weight: 200; font-size: 36px; color: var(--accent); line-height: 1; letter-spacing: -.03em; }
-  .stat-label { font-size: 9px; font-weight: 400; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-muted); margin-top: 6px; }
+  .about-right { display: flex; justify-content: center; align-items: center; }
+  .about-img { width: min(400px, 100%); aspect-ratio: 1/1; object-fit: cover; display: block; filter: contrast(1.03) saturate(.9); }
 
   /* TRABAJOS PREVIOS — CARRUSEL */
 #trabajos {
@@ -458,16 +454,14 @@ nav.scrolled { padding: 14px 24px; }
 
 <!-- HERO -->
 <section id="inicio">
-  <div class="hero-video-wrap">
+  <<div class="hero-video-wrap">
      <video autoplay muted loop playsinline>
-      <source src="portada.mp4" type="video/mp4">
+      <source src="Video para portada web.mp4" type="video/mp4">
     </video> 
     
   </div>
-  <!--<div class="hero-content"> 
-    <h1 class="hero-title">
-      Transformamos<br>espacios en<br><em>historias.</em>
-    </h1> -->
+  <div class="hero-content"> 
+   
     <div class="hero-tagline">
       Muebles artesanales<br>
       Ruta 11 KM 344<br>
@@ -483,22 +477,17 @@ nav.scrolled { padding: 14px 24px; }
 <!-- NOSOTROS -->
 <section id="nosotros">
   <div>
-    <div class="section-label fade-up">Nosotros</div>
-    <h2 class="about-heading fade-up d1">Oficio &amp;<br><em>diseño</em><br>en equilibrio.</h2>
+    <div class="about-title-row fade-up">
+      <span class="about-title-main">Nosotros</span>
+      <!--<span class="about-title-sub">Carpintería</span>-->
+    </div>
     <div class="about-body fade-up d2">
       <p>En OLA Muebles combinamos oficio artesanal con tecnología moderna para crear muebles funcionales, duraderos y únicos. Cada pieza está pensada para acompañar la vida real de quienes la habitan.</p>
-      <p>Trabajamos con maderas premium seleccionadas — zoita, petiribi, kiri — y terminaciones que resisten el paso del tiempo, desde el boceto hasta la instalación en tu hogar.</p>
-    </div>
-    <div class="about-stats fade-up d3">
-      <div><div class="stat-num">100%</div><div class="stat-label">Artesanal</div></div>
-      <div><div class="stat-num">A medida</div><div class="stat-label">Cada proyecto</div></div>
-      <div><div class="stat-num">+500</div><div class="stat-label">Proyectos</div></div>
-      <div><div class="stat-num">Bs. As.</div><div class="stat-label">Costa Atlántica</div></div>
+      <p>Trabajamos con maderas premium seleccionadas — zoita, petiribi, kiri — y terminaciones que resisten el paso del tiempo, desde el boceto hasta la instalación en tu hogar. —— Oficio & diseño en equilibrio.</p>
     </div>
   </div>
   <div class="about-right fade-up d2">
-    <img class="about-img" src="IMG_9191.jpg"
-    <div class="about-accent-block"></div>
+    <img class="about-img" src="OLA MUEBLES Diseñamos muebles y creamos ideas. (8).pdf.png" alt="OLA Muebles">
   </div>
 </section>
 
