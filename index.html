@@ -367,7 +367,14 @@ nav.scrolled .nav-links a { color: white; }
     #trabajos { padding: 80px 0; }
     .trabajos-header { padding: 0 24px 0 24px; }
     .carousel-wrap { padding: 0 24px; gap: 0; }
-    .carousel-btn { display: none; }
+    .carousel-btn {
+      position: absolute;
+      top: 80px;
+      transform: none;
+      display: flex;
+    }
+    .carousel-btn.prev { right: 72px; left: auto; }
+    .carousel-btn.next { right: 24px; left: auto; }
     .carousel-track { gap: 12px; }
     .form-row { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 20px; padding: 32px 24px; text-align: center; }
