@@ -158,7 +158,7 @@ nav.scrolled .nav-links a { color: white; }
     margin-bottom: 36px;
   }
   .about-title-main {
-    font-weight: 200; font-size: clamp(26px, 4.5vw, 50px);
+    font-weight: 200; font-size: clamp(20px, 4.5vw, 42px);
     line-height: 1.1; letter-spacing: -.025em; color:var(--accent); opacity:(0.5);
   }
   .about-title-sub {
@@ -169,6 +169,7 @@ nav.scrolled .nav-links a { color: white; }
   .about-body p+p { margin-top: 16px; }
   .about-right { position: relative; }
   .about-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: contrast(1.03) saturate(.9); }
+  .nosotros-bottom-bar { height: 64px; background: var(--bg); }
 
   /* TRABAJOS PREVIOS — CARRUSEL */
 #trabajos {
@@ -183,7 +184,7 @@ nav.scrolled .nav-links a { color: white; }
   margin-bottom: 56px;
 }
 .trabajos-title {
-  font-weight: 200; font-size: clamp(26px, 4.5vw, 50px);
+  font-weight: 200; font-size: clamp(20px, 4.5vw, 42px);
   line-height: 1.1; letter-spacing: -.025em; color: var(--accent); opacity: 0.5;
 }
 
@@ -364,8 +365,9 @@ nav.scrolled .nav-links a { color: white; }
     .about-left { padding: 80px 24px; }
     .about-right { aspect-ratio: 1/1; }
     #trabajos { padding: 80px 0; }
-    .trabajos-header { padding: 0 24px; }
-    .carousel-wrap { padding: 0 24px; }
+    .trabajos-header { padding: 0 24px 0 24px; }
+    .carousel-wrap { padding: 0 24px; gap: 0; }
+    .carousel-btn { display: none; }
     .carousel-track { gap: 12px; }
     .form-row { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 20px; padding: 32px 24px; text-align: center; }
@@ -463,6 +465,7 @@ nav.scrolled { padding: 14px 24px; }
     <img class="about-img" src="OLA MUEBLES Diseñamos muebles y creamos ideas. (8).pdf.png" alt="OLA Muebles">
   </div>
 </section>
+<div class="nosotros-bottom-bar"></div>
 
 <section id="trabajos">
   <div class="trabajos-header">
@@ -598,12 +601,13 @@ nav.scrolled { padding: 14px 24px; }
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const dotsWrap = document.getElementById('carouselDots');
-  const TARGET_WIDTH = 300;
-
   function sizeSlides() {
     const gap = parseFloat(getComputedStyle(track).gap) || 0;
     const innerWidth = viewport.clientWidth;
-    const count = Math.max(3, Math.round((innerWidth + gap) / (TARGET_WIDTH + gap)));
+    const isMobile = window.innerWidth <= 860;
+    const targetW = isMobile ? 150 : 280;
+    const minCount = isMobile ? 2 : 3;
+    const count = Math.max(minCount, Math.round((innerWidth + gap) / (targetW + gap)));
     const slideW = (innerWidth - gap * (count - 1)) / count;
     wrap.style.setProperty('--slide-w', slideW + 'px');
   }
